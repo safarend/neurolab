@@ -129,7 +129,7 @@ class Reccurent(Layer):
         self.transf = transf
         self.outs = []
         if not hasattr(transf, 'out_minmax'):
-            test = np.asfarry([-1e100, -100, -10, -1, 0, 1, 10, 100, 1e100])
+            test = np.asfarray([-1e100, -100, -10, -1, 0, 1, 10, 100, 1e100])
             val = self.transf(test)
             self.out_minmax = np.array([val.min(), val.max()] * self.co)
         else:
